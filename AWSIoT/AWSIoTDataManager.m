@@ -333,6 +333,10 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
     [self.mqttClient setIsMetricsEnabled:enabled];
 }
 
+- (void)setUsernameFields:(NSDictionary<NSString *, NSString *> *)usernameFields {
+    [self.mqttClient setUsernameFields:usernameFields];
+}
+
 - (BOOL)connectWithClientId:(NSString*)clientId
                cleanSession:(BOOL)cleanSession
                 certificateId:(NSString *)certificateId
